@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Text To Speech</title>
+  </head>
+  <body>
+    
+    <div class="container">
+
+      <div class="speech">
+
+        <h1 class="speech__title">Text To Speech</h1>
+
+        <label class="speech__label" for="voice">Select Voice:</label>
+        <select class="speech__field" name="voice" id="voice"></select>
+
+        <div class="speech-configs">
+
+          <div class="speech-configs__config">
+            <label for="volume" class="speech__label">Volume:</label>
+            <input type="range" name="volume" id="volume" min="0" max="10" value="10" class="speech__range">
+            <span class="config__current-value" id="volume-display">1</span>
+          </div>
+
+          <div class="speech-configs__config">
+            <label for="rate" class="speech__label">Rate:</label>
+            <input type="range" name="rate" id="rate" min="1" max="100" value="10" class="speech__range">
+            <span class="config__current-value" id="rate-display">1</span>
+          </div>
+
+          <div class="speech-configs__config">
+            <label for="pitch" class="speech__label">Pitch:</label>
+            <input type="range" name="pitch" id="pitch" min="0" max="20" value="10" class="speech__range">
+            <span class="config__current-value" id="pitch-display">1</span>
+          </div>
+
+        </div><!-- speech configs -->
+
+        <textarea class="speech__field" name="text-speech" id="text-speech" cols="30" rows="10"></textarea>
+
+        <button class="btn btn--primary" id="start">Start</button>
+
+      </div><!-- speech -->
+    </div><!-- container -->
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
